@@ -1,6 +1,56 @@
-# Covid_GeoTracker  Instructions 
+Project Title - *************************
+Covid_GeoTracker 
+
+This web app will determine hotspot for covid impactation based on given location, and also provide location on a travel route along with population density, using both the weather API and the Geo_location API. This project will include as simply two page HTML, along with advanced CSS stylyings.
 
 
+
+PREREQUISITES *************************
+
+https://fonts.google.com/
+https://getbootstrap.com/
+https://get.foundation/
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com>
+    <script src="index.js"> </script>
+  </head>
+
+
+INSTALLATION *************************
+
+Kendo UI is a jQuery-based development framework.
+You can build modern web applications very quickly and pretty easily with Kendo UI.
+Some of its features are:
+
+    over 70 UI components
+    preconfigured and customizable theme
+    built-in support for Angular 1.x
+    
+    //  THIS WILL MAKE OUR WEB APP UI COMPATIBLE // 
+
+
+
+TECHNOLOGIES*************************************************************************
 +++++++++++++++++++++++++++++++++++++++++++++++++++++ API for Project ++++++++++++++++++++++
 
 

@@ -28,3 +28,5 @@ After first review by the team,  new task assignments will be handed out.
   PLEASE UPDATE YOUR SECTIONS ON EXACTLY WHAT YOU NEED TO/DID TO  ACOMMPLISHED YOUR ASSIGNED TASK ♛
   
   
+
+https://coolsymbol.com/

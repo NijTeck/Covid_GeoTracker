@@ -1,13 +1,76 @@
-<!DOCTYPE> 
-<html> 
+<html class="" lang="en">
 
-<head> 
-</head> 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation | Welcome</title>
+    <!--link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css"-->
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
 
 
-<body> 
 
-</body> 
+<body>
 
-</html> 
 
+    <!-- Start Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="menu">
+                <li class="menu-text">Info</li>
+                <li><a href="#">One</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- End Top Bar -->
+
+    <div class="callout large primary">
+        <div class="row column text-center">
+            <h1>Project_)ne</h1>
+            <h2 class="subheader">Covid_GeoTracker</h2>
+        </div>
+    </div>
+
+    <!-- We can now combine rows and columns when there's only one column in that row -->
+    <div class="row medium-8 large-7 columns">
+        <div class="blog-post">
+
+            <div class="row">
+                <div class="united-states" id="search-panel">
+
+                    <div class="row">
+                        <input id="input" style="margin-bottom: 20px;">
+                        <button id="submit"> Search </button>
+                    </div>
+
+                    <!-- container for all codes  -->
+
+                    <div id="map-container" style="height: 350px ; width: 90%; background-color:  gray;">
+                        <div class="card" id="Covid_Data">
+                            <h3 id="city-input"></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <script src="script.js/script.js"></script>
+
+            <!--script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script-->
+            <!--script>
+                $(document).foundation();
+            </script-->
+
+
+        </div>
+    </div>
+</body>
+
+</html>

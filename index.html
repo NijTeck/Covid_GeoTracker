@@ -1,9 +1,8 @@
-<html lang = "en"> 
+<html> 
 <head> 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-   
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
@@ -12,13 +11,15 @@
     <style src = "/group/Covid_GeoTracker/style.css/style.css"></style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com"></script>
-    
 </head> 
 
 
 
 <body>
 
+
+    <!-- Start Top Bar -->
+    <!-- End Top Bar -->
 
     <div class="callout large primary">
         <div class="row column text-center">
@@ -32,13 +33,13 @@
         <div class="blog-post">
 
             <div class="row">
-                <div class="united-states" id="search-panel">
-
-                    <div class="row">
-                        <input id="input" style="margin-bottom: 20px;">
-                        <button id="submit"> Search </button>
+                <div class = "container" id = "search-panel">
+        
+                    <label class = "row">Search</label>
+                    <div class = "row">
+                    <input id = "input"></input>
+                    <button class = "btn btn-default"id = "search-button"><span class="fa fa-search"></span></button>
                     </div>
-
                     <!-- container for all codes  -->
 
                     <div id="map-container" style="height: 350px ; width: 90%; background-color:  gray;">

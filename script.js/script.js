@@ -1,33 +1,28 @@
-// We need to link to Geo-location 
+var covidURL = "https://api.covid19api.com/countries" + " " + "PMAK-5ecdc71bcf51720034c0e77e-dcfabbd6b156f6387dca1b42a883fff43a";
+console.log(covidURL);
 
-    // CODE for GEo_Location API/whatever goes here 
-     // **** 
-
-
-// We input a zipcode/address location 
-
-    // CODE for (JS) input section { Google search }
-    // ****
+return $.ajax({
+    url: chicagoURL,
+    method: "GET"
 
 
-//  ( how do we add the zipcode and link it the page) 
-    // (location is witing US)
+})
+
+//.then(function(response) {
+var mapContainer = $("<div class = 'map-container'>")
+    //console.log("response");
+var results = response.data;
+console.log(response);
+var country = response.name;
+
+});
+/*
+$("#submit").on("click", function(event) {
+    event.preventDefault();
+    console.log("click");
+    //$(".united-states").html("");
+    // $(".map-container").show();
 
 
-
-// we need be able to click submit and have the submit button linked to the <input> sections of the html and return result
-    // No Idea, google how to link the submit button to the code to make it work well and return required info.
-    // **** 
-
-    
-// This Submit button will pull updated information from the Location DATABASE
-
-// Then, we will  need to use this information to extract query using  JSON to output some exact info (i.e like in the IMOB example)
-
-
-// Local Storage will be needed to  store output info down 
-// to the button of the page. 
-
-
-
-
+})
+*/

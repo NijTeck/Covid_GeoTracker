@@ -4,10 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
+      
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
@@ -25,31 +22,58 @@
     
 </head> 
 
-<body> 
+</head>
 
-    <!--- HTML Body begines here -->
-    <h1>Covid_GeoTracker</h1>
 
-    
-        <div class="map-container"> 
-          <input placeholder=" Enter Zipcode or Address"; > </input> 
 
-          <img src="https://miro.medium.com/max/4064/1*qYUvh-EtES8dtgKiBRiLsA.png" height="600"; width="60%"; > </a>
-        <div id="search"></div>
+<body>
+
+
+    <!-- Start Top Bar -->
+
+    <!-- End Top Bar -->
+
+    <div class="callout large primary">
+        <div class="row column text-center">
+            <h1>Project_)ne</h1>
+            <h2 class="subheader">Covid_GeoTracker</h2>
         </div>
+    </div>
+
+    <!-- We can now combine rows and columns when there's only one column in that row -->
+    <div class="row medium-8 large-7 columns">
+        <div class="blog-post">
+
+            <div class="row">
+                <div class="united-states" id="search-panel">
+
+                    <div class="row">
+                        <input id="input" style="margin-bottom: 20px;">
+                        <button id="submit"> Search </button>
+                    </div>
+
+                    <!-- container for all codes  -->
+
+                    <div id="map-container" style="height: 350px ; width: 90%; background-color:  gray;">
+                        <div class="card" id="Covid_Data">
+                            <h3 id="city-input"></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
 
+            <script src="script.js/script.js"></script>
 
-    <button id="submit">Submit Request</button>
-    <br>
-    <br> 
-
-
-    <div id="results"> rch criteria. Searched results will give customer <br>  access to permit, building, and certificate of occupancy information. The Viewer also offers customers the ability to view<br> customized maps with easy-to-use map layer features and advanced mapping tools.  </div>
-
+            <!--script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script-->
+            <!--script>
+                $(document).foundation();
+            </script-->
 
 
-</body> 
+        </div>
+    </div>
+</body>
 
-</html> 
-
+</html>

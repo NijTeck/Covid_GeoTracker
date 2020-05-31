@@ -1,8 +1,8 @@
 function country(countryInput) {
-	if (countryInput == Dominica){
+	if (countryInput == UnitedStates){
 		return; 
 	}
-var covidURL = "https://api.covid19api.com/countries" + "Dominica" + "&appid=PMAK-5ecdc71bcf51720034c0e77e-dcfabbd6b156f6387dca1b42a883fff43a";
+var covidURL = "https://api.covid19api.com/countries" + "" + "&appid=f877968bf7mshff9af34bbc2a8bap11856djsn5fe6819edb21";
 console.log(covidURL);
  $.ajax({
     url: covidURL,
@@ -32,4 +32,4 @@ function onSearch (){
     let queryCity = document.getElementById("input").value; 
     console.info("HERE");
 }
-console.log("info");
+

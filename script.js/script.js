@@ -100,5 +100,16 @@ function onSearch(){
 
   //TODO: display to screen goes here!!!!!!!!!!!!!!!
   //Country, deaths, population, 
-
+  var countryID = selectedOBJ.Country;
+  var date = selectedOBJ.Date; 
+  var populationNum = selectedOBJ.totalPop;
+  var confirmed = selectedOBJ.TotalConfirmed; 
+  var recovered = selectedOBJ.TotalRecovered; 
+  var totalDeaths = selectedOBJ.TotalDeaths;
+  
+  $("#country").append(countryID, date);
+  $("#population").append(populationNum);
+  $("#confirmed").append(confirmed);
+  $("#recovered").append(recovered);
+  $("#death").append(totalDeaths);
 }

@@ -8,19 +8,23 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <style src = "/group/Covid_GeoTracker/style.css/style.css"></style>
-
+    <script src="script.js"></script>
 
  
 </head> 
 
 
 
-<body>
+<body onload = "storeSummaryData()">
 
 
     <!-- Start Top Bar -->
     <!-- End Top Bar -->
-
+<div>
+    <p>
+        
+    </p>
+</div>
     <div class="callout large primary">
         <div class="row column text-center">
             <h1>Project_)ne</h1>
@@ -41,14 +45,12 @@
 
 
                         <!-- Add country codes -->
-                        <option value="US"> United States </option>
-                        <option value="IT"> Italy </option>
                     </select>
-                    <button class="btn btn-default" id="search-button"><span class="fa fa-search"> Search</span></button>
+                    <button class="btn btn-default" id="search-button" onclick="onSearch()"><span class="fa fa-search"> Search</span></button>
                     </div>
                     <!-- container for all codes  -->
 
-                    <div id="map-container" style="height: 350px ; width: 90%; background-color:  gray;">
+                    <div class = "container" id="info-container" style="height: 350px ; width: 90%; background-color:  gray;">
                         <div class="card" id="Covid_Data">
                             <h3 id="city-input"></h3>
                         </div>
@@ -58,7 +60,7 @@
             </div>
 
 
-            <script src="script.js/script.js"></script>
+          
 
             <!--script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script-->
             <!--script>

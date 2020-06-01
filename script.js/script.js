@@ -1,69 +1,86 @@
 
+                // $(document).foundation();
+ $("#search-button").click();
 
-  $("#search-button").click(CovidApi);
-
-function CovidApi () {
-  var Slug = $("#Slug").value;
-  var apiURL= "https://api.covid19api.com//dayone/country/"+Slug;
-    $.getJSON(apiURL, function (data) {
-      console.log(data);
-       Country = [];
-      let totalDeath = [];
-          totalConfirmed = [];
-      let totalRecovered = [];
-           console.log(data);
-
-   
-      /*var total_Country = "";
-      var total_Deaths = "";
-      var total_Confirmed = "";
-      var total_Recovered = "";
+ $(document).ready(function () {
 
 
-      total_Country = data.Countries[0].Country;
-      total_Death = data.Countries[0].totalDeaths;
-      total_Confirmed = data.Countries[0].totalConfirmed;
-      total_Recovered = data.Countries[0].totalRecovered;*/
+  
+  // Get JSON data from url
+  $.getJSON("https://covidtracking.com/api/states?=US", function (data) {
 
-
-      // calling a particular country 
+      var state = [];
+      var negative = [];
+      var hospitalizedCurrently = [];
+      var recoverd = [];
+      var death = [];
+      var total = [];
+      var dateChecked = []; 
+      var score = [];
     
+const total_state = "AZ";
+var total_negative;
+var total_hosptalizedCurrently;
+var total_recovered;
+var total_death;
+var total_total;
+var total_dateChecked; 
+var total_score;
 
-    $.each(data.Countries, function(id, obj) {
+
+total_negative = data.negative;
+total_hosptalizedCurrently = data.hospitalizedCurrently;
+total_recovered = data.recoverd;
+total_death = data.death;
+total_total = data.total;
+total_dateChecked = data.dateChecked;
+total_score = data.score;
+
+
+$("#negative").append(total_negative);
+$("hospitalizedCurrently").append(total_hosptalizedCurrently);
+$("#recovered").append(total_recovered);
+$("#death").append(total_death);
+$("#total").append(total_total);
+$("#dateChecked").append(total_dateChecked);
+$("#score").append(total_score);
+
+//console.log(total_score);
+
+
+
+      $.each(data.StateData, function (id, obj) {
+        state.push(obj.state);
+        console.log()
+        negative.push(obj.confirmed);
+        hospitalizedCurrently.push(obj.hospitalizedCurrently);
+        recoverd.push(obj.recoverd);
+        death.push(obj.death);
+        total.push(obj.total);
+        dateChecked.push(obj.dateChecked);
+        score.push(obj.score);
+        console.log(obj.hospitalizedCurrently)
+      })
+
+      state.shift();
+      negative.shift();
+      hospitalizedCurrently.shift();
+      recoverd.shift();
+      death.shift();
+      total.shift();
+      dateChecked.shift();
+      score.shift();
+
+   console.log(state);
+
+   /*    $.each(data.Countries, function(id, obj) {
       
        if(obj.Slug === Slug){
 
-                                                       console.log(obj.TotalDeaths);
-
-        Country.push(obj.Countries);
-        totalDeath.push(obj.TotalDeaths);
-        totalConfirmed.push(obj.TotalConfirmed);
-        totalRecovered.push(obj.TotalRecovered);
-        
-      
+                                                       console.log(obj.TotalDeaths); */
       
 
-        totalConfirmed.push(obj.total_Confirmed);
-        //totalDeaths.push(obj.TotalDeaths);
-      
 
-        Country.push(obj.Countries);
-       
-       } 
     })
+ });
 
-    });
-  }
-
-
-
-  /*Country: "United States of America"
-CountryCode: "US"
-Date: "2020-05-30T18:20:41Z"
-NewConfirmed: 24266
-NewDeaths: 1193
-NewRecovered: 6455
-Slug: "united-states"
-TotalConfirmed: 1746019
-TotalDeaths: 102809
-TotalRecovered: 406446 */

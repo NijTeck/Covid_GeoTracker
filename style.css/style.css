@@ -7,7 +7,6 @@ h1{
     background-color:rgb(12, 56, 92);
     color: #fff;
     }
-
     footer{
         font-weight: 300;
         margin-top: 35%;
@@ -17,15 +16,11 @@ h1{
         color: #fff;
         position: relative
         }
-
-
-
-     .map-container{
+        .map-container{
             position: relative;
             height: 250px;
             margin-top: 100px;
             }
-img {
-        float: right;    
-         margin: 0 0 0 15px;
-    }
+            body {
+                font-family: "Baloo Thambi 2", cursive;
+              }

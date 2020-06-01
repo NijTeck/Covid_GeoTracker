@@ -1,28 +1,86 @@
-var covidURL = "https://api.covid19api.com/countries" + " " + "PMAK-5ecdc71bcf51720034c0e77e-dcfabbd6b156f6387dca1b42a883fff43a";
-console.log(covidURL);
+ 
+                // $(document).foundation();
+ $("#search-button").click();
 
-return $.ajax({
-    url: chicagoURL,
-    method: "GET"
-
-
-})
-
-//.then(function(response) {
-var mapContainer = $("<div class = 'map-container'>")
-    //console.log("response");
-var results = response.data;
-console.log(response);
-var country = response.name;
-
-});
-/*
-$("#submit").on("click", function(event) {
-    event.preventDefault();
-    console.log("click");
-    //$(".united-states").html("");
-    // $(".map-container").show();
+ $(document).ready(function () {
 
 
-})
-*/
+  
+  // Get JSON data from url
+  $.getJSON("https://covidtracking.com/api/states?=US", function (data) {
+
+      var state = [];
+      var negative = [];
+      var hospitalizedCurrently = [];
+      var recoverd = [];
+      var death = [];
+      var total = [];
+      var dateChecked = []; 
+      var score = [];
+    
+const total_state = "AZ";
+var total_negative;
+var total_hosptalizedCurrently;
+var total_recovered;
+var total_death;
+var total_total;
+var total_dateChecked; 
+var total_score;
+
+
+total_negative = data.negative;
+total_hosptalizedCurrently = data.hospitalizedCurrently;
+total_recovered = data.recoverd;
+total_death = data.death;
+total_total = data.total;
+total_dateChecked = data.dateChecked;
+total_score = data.score;
+
+
+$("#negative").append(total_negative);
+$("hospitalizedCurrently").append(total_hosptalizedCurrently);
+$("#recovered").append(total_recovered);
+$("#death").append(total_death);
+$("#total").append(total_total);
+$("#dateChecked").append(total_dateChecked);
+$("#score").append(total_score);
+
+//console.log(total_score);
+
+
+
+      $.each(data.StateData, function (id, obj) {
+        state.push(obj.state);
+        console.log()
+        negative.push(obj.confirmed);
+        hospitalizedCurrently.push(obj.hospitalizedCurrently);
+        recoverd.push(obj.recoverd);
+        death.push(obj.death);
+        total.push(obj.total);
+        dateChecked.push(obj.dateChecked);
+        score.push(obj.score);
+        console.log(obj.hospitalizedCurrently)
+      })
+
+      state.shift();
+      negative.shift();
+      hospitalizedCurrently.shift();
+      recoverd.shift();
+      death.shift();
+      total.shift();
+      dateChecked.shift();
+      score.shift();
+
+   console.log(state);
+
+   /*    $.each(data.Countries, function(id, obj) {
+      
+       if(obj.Slug === Slug){
+
+                                                       console.log(obj.TotalDeaths); */
+      
+
+
+    })
+ });
+

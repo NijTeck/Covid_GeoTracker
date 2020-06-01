@@ -1,3 +1,4 @@
+
 <html> 
 <head> 
     <meta charset="UTF-8" />
@@ -15,11 +16,18 @@
 
 
 
+</head> 
+
 <body>
-
-
-    <!-- Start Top Bar -->
+    <!-- Start Top Bar
     <!-- End Top Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+    </nav>
+
 
     <div class="callout large primary">
         <div class="row column text-center">
@@ -28,46 +36,107 @@
         </div>
     </div>
 
-    <!-- We can now combine rows and columns when there's only one column in that row -->
-    <div class="row medium-8 large-7 columns">
+    <!--We can now combine rows and columns when there's only one column in that row-->
+     <div class="row medium-8 large-7 columns">
         <div class="blog-post">
 
             <div class="row">
                 <div class = "container" id = "search-panel">
         
                     <label class = "row">Search</label>
-                    <div class = "row">
-                    <select id="Slug"> 
+
+                    <div class = "StateData">
 
 
-                        <!-- Add country codes -->
-                        <option value="US"> United States </option>
-                        <option value="IT"> Italy </option>
-                    </select>
-                    <button class="btn btn-default" id="search-button"><span class="fa fa-search"> Search</span></button>
+
+                        <input id="input" style="margin-bottom: 20px;">
+                     <button class="btn btn-default" id="search-button"><span class="fa fa-search"> Search</span></button>
                     </div>
-                    <!-- container for all codes  -->
+                  
+                 </div> 
 
-                    <div id="map-container" style="height: 350px ; width: 90%; background-color:  gray;">
-                        <div class="card" id="Covid_Data">
-                            <h3 id="city-input"></h3>
-                        </div>
-                    </div>
-                </div>
+             </div>
 
+            <div class="col-1 text-warning">
+                <h5> negative</h5>
+                <p id="negative"> </p>
+            </div>
+            <div class="col-1 text-danger">
+                <h5> hospitalizedCurrently</h5>
+                <p id="hospitalizedCurrently"> </p>
+            </div>
+
+            <div class="col-1 text-success">
+                <h5> recovered</h5>
+                <p id="recovered"> </p>
+            </div>
+
+            <div class="col-1 text warning">
+                <h5> death</h5>
+                <p id="death"> </p>
+            </div>
+
+            <div class="col-1 text warning">
+                <h5> total</h5>
+                <p id="total"> </p>
+            </div>
+            <div class="col-1 text-success">
+                <h5> dateChecked</h5>
+                <p id="dateChecked"> </p>
+            </div>
+
+            <div class="col-1 text warning">
+                <h5> score</h5>
+                <p id="score"> </p>
             </div>
 
 
-            <script src="script.js/script.js"></script>
-
-            <!--script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script-->
-            <!--script>
-                $(document).foundation();
-            </script-->
+         </div>
 
 
-        </div>
+         
+         
+            <script src="script.js/script.js"></script> 
+            <script>
+
+            </script>
+         </div>
     </div>
 </body>
 
 </html>
+
+
+ <!-- possible variables -->
+<!-- 
+     "state": "AK",
+        "positive": 434,
+        "positiveScore": 1,
+        "negativeScore": 1,
+        "negativeRegularScore": 1,
+        "commercialScore": 1,
+        "grade": "A",
+        "score": 4,
+        "notes": "Please stop using the \"total\" field. Use \"totalTestResults\" instead. As of 4/24/20, \"grade\" is deprecated. Please use \"dataQualityGrade\" instead.",
+        "dataQualityGrade": "A",
+        "negative": 51261,
+        "pending": null,
+        "hospitalizedCurrently": 14,
+        "hospitalizedCumulative": null,
+        "inIcuCurrently": null,
+        "inIcuCumulative": null,
+        "onVentilatorCurrently": 2,
+        "onVentilatorCumulative": null,
+        "recovered": 368,
+        "lastUpdateEt": "5/30 00:00",
+        "checkTimeEt": "5/30 16:00",
+        "death": 10,
+        "hospitalized": null,
+        "total": 51695,
+        "totalTestResults": 51695,
+        "posNeg": 51695,
+        "fips": "02",
+        "dateModified": "2020-05-30T04:00:00Z",
+        "dateChecked": "2020-05-30T20:00:00Z",
+        "hash": "914d5f5b1b4c8a5fa31a055f648009b21d66dfc8" -->
+

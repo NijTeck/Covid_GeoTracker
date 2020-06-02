@@ -1,4 +1,3 @@
-
 function storeSummaryData(){
   //promises continues to excute function without going off the rails. 
   let covidPromise = $.ajax ({
@@ -49,7 +48,6 @@ function parseJSON(data){
 
   return countryList;
 }
-//puts population into summary of country 
 function afterBothFinish(values){
   let popData = values[1];
   let countryList = values[0];
@@ -99,7 +97,37 @@ function onSearch(){
 
   console.info(selectedOBJ);
 
-  //TODO: display to screen goes here!!!!!!!!!!!!!!!
-  //Country, deaths, population, 
 
+  var greenDiv = $("<div class = 'container'>")
+  var redDiv = $("<div class= 'container'>")
+
+  var countryID = selectedOBJ.Country;
+  var date = selectedOBJ.Date; 
+  var populationNum = selectedOBJ.totalPop;
+  var confirmed = selectedOBJ.TotalConfirmed; 
+  var recovered = selectedOBJ.TotalRecovered; 
+  var totalDeaths = selectedOBJ.TotalDeaths;
+  
+  //creates lines of text inside div tags
+  var pOne = $("<p>").text("Country: " + countryID);
+  var pTwo = $("<p>").text("Date: " + date);
+  var pThree = $("<p>").text("Population: " + populationNum);
+  var pFour = $("<p>").text("Confirmed: " + confirmed);
+  var pFive = $("<p>").text("Recovered: " + recovered);
+  var pSix = $("<p>").text("Death: " + totalDeaths)
+
+  //appends each line to the container
+  greenDiv.append(pOne);
+  greenDiv.append(pTwo);
+  greenDiv.append(pThree);
+  redDiv.append(pFour); 
+  greenDiv.append(pFive);
+  redDiv.append(pSix)
+
+  //empties container when selecting a new country so they do not repeat
+  $('#green').empty();
+  $('#red').empty();
+  $('#green').prepend(greenDiv);
+  $('#red').prepend(redDiv);
+  return;
 }

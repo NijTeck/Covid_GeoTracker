@@ -100,6 +100,8 @@ function onSearch(){
 
   //TODO: display to screen goes here!!!!!!!!!!!!!!!
   //Country, deaths, population, 
+  var infoDiv = $("<div class = 'container'>")
+
   var countryID = selectedOBJ.Country;
   var date = selectedOBJ.Date; 
   var populationNum = selectedOBJ.totalPop;
@@ -107,9 +109,20 @@ function onSearch(){
   var recovered = selectedOBJ.TotalRecovered; 
   var totalDeaths = selectedOBJ.TotalDeaths;
   
-  $("#country").append(countryID, date);
-  $("#population").append(populationNum);
-  $("#confirmed").append(confirmed);
-  $("#recovered").append(recovered);
-  $("#death").append(totalDeaths);
+  var pOne = $("<p>").text("Country: " + countryID);
+  var pTwo = $("<p>").text("Date: " + date);
+  var pThree = $("<p>").text("Population: " + populationNum);
+  var pFour = $("<p>").text("Confirmed: " + confirmed);
+  var pFive = $("<p>").text("Recovered: " + recovered);
+  var pSix = $("<p>").text("Death: " + totalDeaths)
+
+  infoDiv.append(pOne);
+  infoDiv.append(pTwo);
+  infoDiv.append(pThree);
+  infoDiv.append(pFour); 
+  infoDiv.append(pFive);  
+
+  $('#info-container').empty();
+  $('#info-container').prepend(infoDiv);
+  return;
 }

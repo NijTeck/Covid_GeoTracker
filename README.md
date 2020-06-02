@@ -7,7 +7,7 @@
 
 Covid_GeoTracker 
 
-This web app will determine hotspot for covid impactation based on given location, and also provide location on a travel route along with population density, using both the weather API and the Geo_location API. This project will include as simply two page HTML, along with advanced CSS stylyings.
+This web app will determine the current data for covid impactation based on given location, and also spit out the population of that country (country, and also < (future addition)provide location on a travel route along with population density>, using both the weather API and the Geo_location API. This project will include as simply one page HTML, along with advanced stylyings( Foundation).
 
 
 ## Table of Contents (Optional)
@@ -30,31 +30,7 @@ Some of its features are:
     
     
     https://fonts.google.com/
-https://getbootstrap.com/
 https://get.foundation/
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com>
-    <script src="index.js"> </script>
   </head>
     //  THIS WILL MAKE OUR WEB APP UI COMPATIBLE // 
 
@@ -64,8 +40,8 @@ https://get.foundation/
 *(   https://get.foundation/  
 
 
-*COVID-19 data Overview
-https://rapidapi.com/Gramzivi/api/covid-19-data
+   ** COVID-19 data Overview
+url : "https://api.covid19api.com/summary",
 
 
 
@@ -77,15 +53,16 @@ Every country sends official reports differently. From once per day to every hou
 If you have a specific wish, please let us know (Discussions), and we will try to put it on our road map. This is a non-profit humanitarian project, and all the money we get goes for better servers, data providers and other expenses for providing you with a better, faster and more reliable API. Stay safe.
 
 
-*Telize API Documentation
-https://rapidapi.com/fcambus/api/telize
+ **  Telize API Documentation
+https://rapidapi.com/fcambus/api/telize  (future upgrade)
 
 Telize offers a JSON IP and GeoIP REST API allowing to get a visitor IP address and to query location information from any IP address. It outputs JSON-encoded IP geolocation data, and supports both Cross-origin resource sharing (CORS) and JSONP.
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++   Location API  +++++++++++++++++++++++++++++++++++++++
 
-*Geo Location Overview
-https://rapidapi.com/arjunkomath/api/geo-location
+ ** Geo Location Overview
+
+    url: "https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all",
 
 Simple API to get Address by providing IP Address or DNS Name
 
@@ -106,18 +83,24 @@ We update our API on the weekly basis. If you would like to be notified of any m
 
 ## Usage 
 
-user wants to find safe route between a and b and use the Covid_GeoTraker web App to find safest travel route.
+User want to know the infection rate and number statistic  based on a particular country.
 
-When I look at my Covid_GeoTracker web App, I'm able to imput my location data,
+When I look at my Covid_GeoTracker web App, I'm able to Select a country,
 
     then I see, a responsive webpage,
-    Then I get an option to imput my desire date, zipcode/city name or state.
+    Then I get an option to imput my desire Country
 
-When I imput my zipcode/city name, state
+** When I imput my country
 
-    Then I get a full simplified briefing.
+    Then I get a full simplified briefing containg 
+            Country: Afghanistan
+            Date: 2020-06-02T20:37:54Z
+            Population: 26023100
+            Recovered: 1428
+            Confirmed: 15750
+            Death: 265
 
-    The briefing should include the hotspot location, weather, temperature of that city, population, and weather forecast.
+  
 
 
 ## Credits

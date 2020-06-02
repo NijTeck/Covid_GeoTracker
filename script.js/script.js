@@ -48,7 +48,7 @@ function parseJSON(data){
 
   return countryList;
 }
-//puts population into summary of country 
+
 function afterBothFinish(values){
   let popData = values[1];
   let countryList = values[0];
@@ -100,7 +100,8 @@ function onSearch(){
 
   //TODO: display to screen goes here!!!!!!!!!!!!!!!
   //Country, deaths, population, 
-  var infoDiv = $("<div class = 'container'>")
+  var greenDiv = $("<div class = 'container'>")
+  var redDiv = $("<div class= 'container'>")
 
   var countryID = selectedOBJ.Country;
   var date = selectedOBJ.Date; 
@@ -109,6 +110,7 @@ function onSearch(){
   var recovered = selectedOBJ.TotalRecovered; 
   var totalDeaths = selectedOBJ.TotalDeaths;
   
+  //creates lines of text inside div tags
   var pOne = $("<p>").text("Country: " + countryID);
   var pTwo = $("<p>").text("Date: " + date);
   var pThree = $("<p>").text("Population: " + populationNum);
@@ -116,13 +118,18 @@ function onSearch(){
   var pFive = $("<p>").text("Recovered: " + recovered);
   var pSix = $("<p>").text("Death: " + totalDeaths)
 
-  infoDiv.append(pOne);
-  infoDiv.append(pTwo);
-  infoDiv.append(pThree);
-  infoDiv.append(pFour); 
-  infoDiv.append(pFive);  
+  //appends each line to the container
+  greenDiv.append(pOne);
+  greenDiv.append(pTwo);
+  greenDiv.append(pThree);
+  redDiv.append(pFour); 
+  greenDiv.append(pFive);
+  redDiv.append(pSix)
 
-  $('#info-container').empty();
-  $('#info-container').prepend(infoDiv);
+  //empties container when selecting a new country so they do not repeat
+  $('#green').empty();
+  $('#red').empty();
+  $('#green').prepend(greenDiv);
+  $('#red').prepend(redDiv);
   return;
 }

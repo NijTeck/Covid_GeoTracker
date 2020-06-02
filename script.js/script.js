@@ -48,7 +48,6 @@ function parseJSON(data){
 
   return countryList;
 }
-
 function afterBothFinish(values){
   let popData = values[1];
   let countryList = values[0];
@@ -98,8 +97,7 @@ function onSearch(){
 
   console.info(selectedOBJ);
 
-  //TODO: display to screen goes here!!!!!!!!!!!!!!!
-  //Country, deaths, population, 
+
   var greenDiv = $("<div class = 'container'>")
   var redDiv = $("<div class= 'container'>")
 

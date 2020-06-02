@@ -1,7 +1,10 @@
 body{    font-size: 20px;    font-family: 'Work Sans', sans-serif;    color: #333;    font-weight: 300;    text-align: center;    background-color: #F8F6F0;    }
 
 .container {
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-top: 1rem !important;
+    margin-right: 0 !important;
+    margin-bottom: 2rem !important;
 }
-
+.green{
+    margin($top, $right, $bottom, $left);
+}
